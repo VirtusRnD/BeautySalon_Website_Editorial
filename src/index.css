@@ -1,0 +1,62 @@
+/* 👑 Google Fonts: Syne (Massive Editorial Display) and Montserrat (Body) */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Montserrat:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* 👑 Editorial Organic Palette */
+  --color-editorial-bg: #768e54; /* Muted organic green */
+  --color-editorial-text: #f3f4ed; /* Off-white for stark contrast */
+
+  /* Accent colors for the geometric shapes */
+  --color-accent-purple: #d592e5;
+  --color-accent-yellow: #f1d258;
+  --color-ocean-dark: #1f2915; /* Re-purposed dark tone for text/buttons */
+
+  /* Font Families */
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+@layer base {
+  body {
+    /* Set the default background to the organic green */
+    @apply font-sans antialiased text-editorial-text bg-editorial-bg;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* 👑 Force all headings to be our massive editorial font */
+    @apply text-editorial-text font-display uppercase tracking-tight;
+  }
+
+  /* MASSIVE Magazine Headlines */
+  h1 {
+    /* Using viewport width (vw) so the text scales massively with the screen */
+    @apply text-[18vw] md:text-[15vw] lg:text-[14vw] font-extrabold leading-[0.85];
+  }
+
+  h2 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1];
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-snug;
+  }
+
+  p {
+    @apply font-sans text-sm md:text-base leading-relaxed text-editorial-text/80 mb-4 font-normal;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

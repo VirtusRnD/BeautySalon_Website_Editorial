@@ -1,0 +1,182 @@
+{
+  "navbar": {
+    "logo": "STYLIN BEAUTY",
+    "links": [
+      { "id": "home", "label": "Ana Sayfa" },
+      { "id": "about", "label": "Hakkımızda" },
+      { "id": "gallery", "label": "Galeri" },
+      { "id": "treatments", "label": "Bakımlar" },
+      { "id": "reviews", "label": "Yorumlar" },
+      { "id": "contact", "label": "İletişim" }
+    ],
+    "signInText": "Giriş Yap",
+    "signUpText": "Kayıt Ol"
+  },
+  "hero": {
+    "titleFirstLine": "ZAMANSIZ",
+    "titleSecondLine": "GÜZELLİK",
+    "description": "Özenle hazırlanmış lüks bakımları, ihtiyaçlarınıza göre şekillendirilmiş uzman dokunuşlarını ve zamansız bir zarafeti deneyimleyin—çünkü siz kusursuzluktan daha azını hak etmiyorsunuz.",
+    "ctaText": "Randevu Alın"
+  },
+  "booking": {
+    "title": "Randevu Alın",
+    "subtitle": "Tercih ettiğiniz zamanı ve hizmeti seçin, gerisini bize bırakın.",
+    "namePlaceholder": "Ad Soyad",
+    "emailPlaceholder": "E-posta Adresi",
+    "phonePlaceholder": "Telefon Numarası",
+    "servicePlaceholder": "Bir Hizmet Seçin",
+    "services": [
+      "İmza Jel Manikür",
+      "Sert Jel Manikür",
+      "Gelin Makyajı ve Saç",
+      "Balyaj ve Şekillendirme",
+      "Ücretsiz Danışmanlık"
+    ],
+    "datePlaceholder": "Tarih Seçin",
+    "timePlaceholder": "Saat Seçin",
+    "buttonText": "Randevuyu Onayla"
+  },
+  "aboutUs": {
+    "overline": "Hikayemiz",
+    "title": "Otantik Güzelliğin Özü",
+    "paragraphs": [
+      "Güzelliğin bir sanat formu olduğuna inanıyoruz. Stüdyomuz, bir kendini ifade etme sığınağı yaratmak için birinci sınıf stilistleri ve organik unsurları bir araya getiriyor.",
+      "Modern editoryal teknikleri zamansız zarafetle harmanlayarak, her detayı gerçek benliğinizi yansıtacak şekilde özenle tasarlıyoruz."
+    ],
+    "ctaText": "Manifestoyu Oku",
+    "expanded": {
+      "title": "Felsefemiz",
+      "paragraphs": [
+        "Gerçek güzellik özgüven ve öz bakımdan doğar. Yalnızca size özel, etik yollarla elde edilmiş birinci sınıf ürünler kullanarak dönüştürücü bir deneyim sunuyoruz."
+      ],
+      "stats": [
+        { "value": "16+", "label": "Yıllık Ustalık" },
+        { "value": "10b", "label": "Özel Tasarım" },
+        { "value": "15", "label": "Sektör Ödülü" }
+      ],
+      "closeText": "Manifestoyu Kapat"
+    }
+  },
+  "gallery": {
+    "overline": "Portfolyo",
+    "title": "Arşiv"
+  },
+  "treatments": {
+    "title": "Bakımlar",
+    "items": [
+      {
+        "overlineText": "Dayanıklı Bitiş",
+        "titleBold": "En İyi",
+        "titleLight": "Jel Manikür.",
+        "description": "İmza niteliğindeki Jel Manikürümüz, şekillendirme ve jel uygulamasını içerir. Kısa ve orta uzunluktaki tırnaklar için idealdir.",
+        "durationText": "1s 30dk",
+        "durationLabel": "Süre",
+        "buttonText": "Hemen Rezervasyon Yap"
+      },
+      {
+        "overlineText": "Kırılmaya Karşı Dayanıklılık",
+        "titleBold": "Sert Jel",
+        "titleLight": "Manikürü",
+        "description": "4 haftaya kadar kırılmaya ve soyulmaya karşı dirençli şekillendirme ve sert jel uygulamasını içerir. Uzun tırnaklar için mükemmeldir.",
+        "durationText": "1s 40dk",
+        "durationLabel": "Bakım",
+        "buttonText": "Hemen Rezervasyon Yap"
+      }
+    ]
+  },
+  "reviews": {
+    "overline": "Müşteri Yorumları",
+    "title": "Müşterilerimiz Ne Diyor",
+    "description": "Müşterilerimizin güzelliklerini yeniden tanımlamak ve özgüvenlerini artırmak için neden bize güvendiklerini keşfedin.",
+    "items": [
+      {
+        "name": "Eleanor Harper",
+        "service": "İmza Jel Manikür",
+        "review": "Kesinlikle kusursuz bir deneyim. Detaylara gösterilen özen rakipsiz ve tırnaklarım hiç bu kadar zarif görünmemişti. Cam gibi pürüzsüz bitiş haftalarca dayandı!"
+      },
+      {
+        "name": "Sophia Sterling",
+        "service": "Gelin Makyajı ve Saç",
+        "review": "Düğün günümde kendimi kesinlikle bir kraliyet ailesi üyesi gibi hissettirdiler. Makyaj o kadar hafifti ki tüm gözyaşlarına ve dansa rağmen kusursuz kaldı."
+      },
+      {
+        "name": "Isabella Rossi",
+        "service": "Balyaj ve Şekillendirme",
+        "review": "Buradaki stilistler gerçek birer sanatçı. Tam olarak ne istediğimi anladılar ve renk geçişleri tek kelimeyle kusursuz. Salonun atmosferi çok rahatlatıcı."
+      }
+    ]
+  },
+  "faq": {
+    "overline": "S.S.S",
+    "title": "Sorularınız Mı Var?",
+    "description": "Deneyiminizi olabildiğince sorunsuz ve anlaşılır hale getirmeye kararlıyız.",
+    "items": [
+      {
+        "question": "Manikür Nedir?",
+        "answer": "Manikür, el ve tırnaklar için yapılan kozmetik bir güzellik bakımıdır. Tırnakların şekillendirilmesi, kütiküllerin temizlenmesi ve oje sürülmesini içerir; ellerinizin bakımlı, sağlıklı ve zarif görünmesini sağlar."
+      },
+      {
+        "question": "Sert Jel ile Yumuşak Jel arasındaki fark nedir?",
+        "answer": "Sert jel, yapısal güç sağlayan dayanıklı bir tırnak güçlendiricidir; uzunluk ve şekil eklemek için mükemmeldir. Yumuşak jel (genellikle kalıcı oje olarak bilinir) daha gözenekli ve esnektir. Kolayca çıkarılabilir ve kendi tırnaklarınızın üzerine uygulamak için idealdir."
+      },
+      {
+        "question": "Sert Jel Tırnaklar Ne Kadar Dayanır?",
+        "answer": "Doğru bakım uygulandığında, sert jel tırnaklar kırılma veya soyulma olmadan genellikle 3 ila 4 hafta dayanır. Doğal tırnağınız uzadıkça kusursuz görünümlerini korumak için 2-3 haftada bir dolgu yaptırmanızı şiddetle tavsiye ederiz."
+      },
+      {
+        "question": "Büyük bir işlem yaptırmadan önce danışmanlık hizmeti sunuyor musunuz?",
+        "answer": "Kesinlikle! Her hizmeti benzersiz ihtiyaçlarınıza göre uyarlamaya inanıyoruz. Randevu almadan önce vizyonunuzu tartışmak için uzman stilistlerimizden herhangi biriyle ücretsiz 15 dakikalık bir danışmanlık randevusu ayarlayabilirsiniz."
+      }
+    ]
+  },
+  "contact": {
+    "overline": "İletişime Geçin",
+    "title": "Talepler",
+    "description": "Salon randevuları, editoryal çekimler veya basın talepleri için lütfen aşağıdaki formu doldurun.",
+    "info": [
+      { "text": "123 Moda Cad, TR 34000" },
+      { "text": "+90 (555) 123-4567" },
+      { "text": "Pzt-Cmt: 09:00 - 20:00" }
+    ],
+    "form": {
+      "namePlaceholder": "Ad Soyad",
+      "emailPlaceholder": "E-posta Adresi",
+      "servicePlaceholder": "Konu / Hizmet",
+      "messagePlaceholder": "Mesajınız",
+      "buttonText": "Talebi Gönder"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Özel Bülten",
+      "description": "Özel editoryal güncellemeler, erken rezervasyonlar ve güzellik sırları doğrudan e-posta kutunuzda.",
+      "placeholder": "E-posta adresinizi girin",
+      "buttonText": "Abone Ol"
+    },
+    "brand": {
+      "description": "Salonumuzu ziyaret ettiğiniz için teşekkür ederiz. Yeni teklifleri, trend olan bakımları ve sağlıklı yaşam tavsiyelerini keşfetmek için bizimle bağlantıda kalın."
+    },
+    "headings": {
+      "company": "Kurumsal",
+      "support": "Destek",
+      "contact": "İletişim"
+    },
+    "links": {
+      "company": [
+        { "label": "Ana Sayfa" },
+        { "label": "Hakkımızda" },
+        { "label": "Bakımlar" },
+        { "label": "Galeri" },
+        { "label": "İletişim" }
+      ],
+      "support": [
+        { "label": "Gizlilik Politikası" },
+        { "label": "Şartlar ve Koşullar" },
+        { "label": "Site Haritası" },
+        { "label": "S.S.S." },
+        { "label": "Randevu Al" }
+      ]
+    },
+    "copyright": "© 2026 stylin beauty salon. Tüm hakları saklıdır."
+  }
+}

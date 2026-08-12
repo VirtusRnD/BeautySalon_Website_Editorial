@@ -1,0 +1,182 @@
+{
+  "navbar": {
+    "logo": "Stylin Beauty",
+    "links": [
+      { "id": "home", "label": "Home" },
+      { "id": "about", "label": "About" },
+      { "id": "gallery", "label": "Gallery" },
+      { "id": "treatments", "label": "Treatments" },
+      { "id": "reviews", "label": "Reviews" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "signInText": "Sign in",
+    "signUpText": "Sign Up"
+  },
+  "hero": {
+    "titleFirstLine": "TIMELESS",
+    "titleSecondLine": "BEAUTY",
+    "description": "Experience luxury treatments crafted with precision, expert care tailored to your needs, and a touch of timeless elegance—because you deserve nothing less than perfection.",
+    "ctaText": "Book an Appointment"
+  },
+  "booking": {
+    "title": "Book an Appointment",
+    "subtitle": "Choose your preferred time and service, and we'll handle the rest.",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Phone Number",
+    "servicePlaceholder": "Select a Service",
+    "services": [
+      "Signature Gel Manicure",
+      "Hard Gel Manicure",
+      "Bridal Makeup & Hair",
+      "Balayage & Styling",
+      "Free Consultation"
+    ],
+    "datePlaceholder": "Select Date",
+    "timePlaceholder": "Select Time",
+    "buttonText": "Confirm Booking"
+  },
+  "aboutUs": {
+    "overline": "Our Story",
+    "title": "The Essence Of Authentic Beauty",
+    "paragraphs": [
+      "We believe that beauty is an art form. Our studio brings together world-class stylists and organic elements to create a sanctuary of self-expression.",
+      "Every detail is curated to reflect your true self, blending modern editorial techniques with timeless grace."
+    ],
+    "ctaText": "Read The Manifesto",
+    "expanded": {
+      "title": "Our Philosophy",
+      "paragraphs": [
+        "True beauty stems from confidence and self-care. We use only premium, ethically sourced products tailored to your unique canvas, ensuring a transformative experience."
+      ],
+      "stats": [
+        { "value": "16+", "label": "Years of Mastery" },
+        { "value": "10k", "label": "Curated Looks" },
+        { "value": "15", "label": "Industry Awards" }
+      ],
+      "closeText": "Close Manifesto"
+    }
+  },
+  "gallery": {
+    "overline": "Portfolio",
+    "title": "The Archive"
+  },
+  "treatments": {
+    "title": "Treatments",
+    "items": [
+      {
+        "overlineText": "Durable Finish",
+        "titleBold": "Best",
+        "titleLight": "Gel Manicure.",
+        "description": "Signature Gel Manicure offers shaping and gel application. Ideal for short to medium-length nails.",
+        "durationText": "1h 30min",
+        "durationLabel": "Duration",
+        "buttonText": "Book Now"
+      },
+      {
+        "overlineText": "Chip-Resistant Durability",
+        "titleBold": "Hard Gel",
+        "titleLight": "Manicure",
+        "description": "Includes shaping and hard gel application that is resistant to chipping and breaking for up to 4 weeks. Perfect for long nails.",
+        "durationText": "1h 40min",
+        "durationLabel": "Maintenance",
+        "buttonText": "Book Now"
+      }
+    ]
+  },
+  "reviews": {
+    "overline": "Testimonials",
+    "title": "What Our Clients Say",
+    "description": "Discover why our clients trust us to redefine their beauty and elevate their confidence.",
+    "items": [
+      {
+        "name": "Eleanor Harper",
+        "service": "Signature Gel Manicure",
+        "review": "Absolutely flawless experience. The attention to detail is unmatched, and my nails have never looked this elegant. The glass-like finish lasted for weeks!"
+      },
+      {
+        "name": "Sophia Sterling",
+        "service": "Bridal Makeup & Hair",
+        "review": "They made me feel like absolute royalty on my wedding day. The makeup was so lightweight yet stayed perfect through all the tears and dancing."
+      },
+      {
+        "name": "Isabella Rossi",
+        "service": "Balayage & Styling",
+        "review": "The stylists here are true artists. They understood exactly what I wanted and the color blending is just seamless. The salon's atmosphere is so relaxing."
+      }
+    ]
+  },
+  "faq": {
+    "overline": "F.A.Q",
+    "title": "Have Questions?",
+    "description": "We're committed to making your experience as smooth and straightforward as possible.",
+    "items": [
+      {
+        "question": "What Is A Manicure?",
+        "answer": "A manicure is a cosmetic beauty treatment for the fingernails and hands. It involves shaping the nails, treating the cuticles, and often applying nail polish, leaving your hands looking polished, healthy, and elegant."
+      },
+      {
+        "question": "What is the difference between Hard Gel and Soft Gel?",
+        "answer": "Hard gel is a durable nail enhancement that provides structural strength, making it perfect for adding length and shape. Soft gel (often known as gel polish) is more porous and flexible. It soaks off easily and is ideal for overlaying on your natural nails."
+      },
+      {
+        "question": "How Long Do Hard Gel Nails Last?",
+        "answer": "With proper care and maintenance, hard gel nails typically last between 3 to 4 weeks without chipping or lifting. We highly recommend regular 2-3 week fill-ins to keep them looking pristine as your natural nail grows out."
+      },
+      {
+        "question": "Do you offer consultations before booking a major treatment?",
+        "answer": "Absolutely! We believe in tailoring every service to your unique needs. You can book a complimentary 15-minute consultation with any of our expert stylists to discuss your vision before committing to an appointment."
+      }
+    ]
+  },
+  "contact": {
+    "overline": "Get In Touch",
+    "title": "Inquiries",
+    "description": "For salon bookings, editorial shoots, or press inquiries, please fill out the form below.",
+    "info": [
+      { "text": "123 Fashion Ave, NY 10001" },
+      { "text": "+1 (555) 123-4567" },
+      { "text": "Mon-Sat: 9AM - 8PM" }
+    ],
+    "form": {
+      "namePlaceholder": "Full Name",
+      "emailPlaceholder": "Email Address",
+      "servicePlaceholder": "Subject / Service",
+      "messagePlaceholder": "Your Message",
+      "buttonText": "Submit Inquiry"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "The Insider List",
+      "description": "Exclusive editorial updates, early bookings, and beauty insights delivered directly to your inbox.",
+      "placeholder": "Enter your email address",
+      "buttonText": "Subscribe"
+    },
+    "brand": {
+      "description": "We appreciate your visit to our salon. Keep connected with us to explore new offers, trending treatments, and wellness advice."
+    },
+    "headings": {
+      "company": "Company",
+      "support": "Support",
+      "contact": "Contact"
+    },
+    "links": {
+      "company": [
+        { "label": "Home" },
+        { "label": "About Us" },
+        { "label": "Treatments" },
+        { "label": "Gallery" },
+        { "label": "Contact Us" }
+      ],
+      "support": [
+        { "label": "Privacy policy" },
+        { "label": "Terms & Condition" },
+        { "label": "Sitemap" },
+        { "label": "FAQs" },
+        { "label": "Get Appointment" }
+      ]
+    },
+    "copyright": "© 2026 stylin beauty salon. All rights reserved."
+  }
+}
