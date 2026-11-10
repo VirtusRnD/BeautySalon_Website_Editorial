@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX, FiCheckCircle } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { config } from "../config";
+import { submitForm } from "../lib/submitForm";
 import { toDynamicUpperCase } from "../utils/stringHelpers";
 
 // 👑 FIX: Helper function to calculate dynamic font size based on the longest word
@@ -25,6 +27,20 @@ const getDynamicTitleSize = (text = "") => {
 const BookingModal = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | sending | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const values = Object.fromEntries(new FormData(e.currentTarget));
+    setStatus("sending");
+    try {
+      await submitForm(values, { email: config.footer.brand.email, subject: t("booking.title") });
+      setStatus("idle");
+      setIsOpen(false);
+    } catch {
+      setStatus("error");
+    }
+  }
 
   useEffect(() => {
     if (isOpen) {
@@ -116,14 +132,11 @@ const BookingModal = () => {
 
               {/* Form */}
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setIsOpen(false);
-                }}
+                onSubmit={handleSubmit}
                 className="flex flex-col gap-6"
               >
                 <div className="flex flex-col sm:flex-row gap-6 w-full">
-                  <input
+                  <input name="name"
                     type="text"
                     placeholder={toDynamicUpperCase(
                       t("booking.namePlaceholder"),
@@ -131,7 +144,7 @@ const BookingModal = () => {
                     required
                     className="w-full bg-transparent border-b-[3px] border-ocean-dark/20 text-ocean-dark placeholder-ocean-dark/40 py-3 font-display font-bold text-sm tracking-widest outline-none focus:border-ocean-dark transition-colors rounded-none"
                   />
-                  <input
+                  <input name="phone"
                     type="tel"
                     placeholder={toDynamicUpperCase(
                       t("booking.phonePlaceholder"),
@@ -141,7 +154,7 @@ const BookingModal = () => {
                   />
                 </div>
 
-                <select
+                <select name="service"
                   required
                   defaultValue=""
                   className="w-full bg-transparent border-b-[3px] border-ocean-dark/20 text-ocean-dark py-3 font-display font-bold text-sm tracking-widest outline-none focus:border-ocean-dark transition-colors rounded-none appearance-none cursor-pointer"
@@ -157,20 +170,27 @@ const BookingModal = () => {
                 </select>
 
                 <div className="flex flex-col sm:flex-row gap-6 w-full">
-                  <input
+                  <input name="date"
                     type="date"
                     required
                     className="w-full bg-transparent border-b-[3px] border-ocean-dark/20 text-ocean-dark py-3 font-display font-bold text-sm tracking-widest outline-none focus:border-ocean-dark transition-colors rounded-none cursor-pointer"
                   />
-                  <input
+                  <input name="time"
                     type="time"
                     required
                     className="w-full bg-transparent border-b-[3px] border-ocean-dark/20 text-ocean-dark py-3 font-display font-bold text-sm tracking-widest outline-none focus:border-ocean-dark transition-colors rounded-none cursor-pointer"
                   />
                 </div>
 
+                {status === "error" && (
+
+                  <p role="alert" className="text-red-600 text-sm font-medium">{t("booking.error")}</p>
+
+                )}
+
                 <button
                   type="submit"
+                  disabled={status === "sending"}
                   className="group w-full flex items-center justify-center gap-4 bg-ocean-dark text-editorial-text px-8 py-5 rounded-none border-[3px] border-ocean-dark font-display font-extrabold text-base tracking-widest hover:bg-accent-purple hover:text-ocean-dark transition-all duration-300 mt-6"
                 >
                   {toDynamicUpperCase(t("booking.buttonText"))}

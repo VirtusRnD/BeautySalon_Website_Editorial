@@ -2,12 +2,30 @@
   "navbar": {
     "logo": "STYLIN BEAUTY",
     "links": [
-      { "id": "home", "label": "Ana Sayfa" },
-      { "id": "about", "label": "Hakkımızda" },
-      { "id": "gallery", "label": "Galeri" },
-      { "id": "treatments", "label": "Bakımlar" },
-      { "id": "reviews", "label": "Yorumlar" },
-      { "id": "contact", "label": "İletişim" }
+      {
+        "id": "home",
+        "label": "Ana Sayfa"
+      },
+      {
+        "id": "about",
+        "label": "Hakkımızda"
+      },
+      {
+        "id": "gallery",
+        "label": "Galeri"
+      },
+      {
+        "id": "treatments",
+        "label": "Bakımlar"
+      },
+      {
+        "id": "reviews",
+        "label": "Yorumlar"
+      },
+      {
+        "id": "contact",
+        "label": "İletişim"
+      }
     ],
     "signInText": "Giriş Yap",
     "signUpText": "Kayıt Ol"
@@ -34,7 +52,8 @@
     ],
     "datePlaceholder": "Tarih Seçin",
     "timePlaceholder": "Saat Seçin",
-    "buttonText": "Randevuyu Onayla"
+    "buttonText": "Randevuyu Onayla",
+    "error": "Randevu talebiniz gönderilemedi. Lütfen tekrar deneyin ya da bizi arayın."
   },
   "aboutUs": {
     "overline": "Hikayemiz",
@@ -50,9 +69,18 @@
         "Gerçek güzellik özgüven ve öz bakımdan doğar. Yalnızca size özel, etik yollarla elde edilmiş birinci sınıf ürünler kullanarak dönüştürücü bir deneyim sunuyoruz."
       ],
       "stats": [
-        { "value": "16+", "label": "Yıllık Ustalık" },
-        { "value": "10b", "label": "Özel Tasarım" },
-        { "value": "15", "label": "Sektör Ödülü" }
+        {
+          "value": "16+",
+          "label": "Yıllık Ustalık"
+        },
+        {
+          "value": "10b",
+          "label": "Özel Tasarım"
+        },
+        {
+          "value": "15",
+          "label": "Sektör Ödülü"
+        }
       ],
       "closeText": "Manifestoyu Kapat"
     }
@@ -134,16 +162,25 @@
     "title": "Talepler",
     "description": "Salon randevuları, editoryal çekimler veya basın talepleri için lütfen aşağıdaki formu doldurun.",
     "info": [
-      { "text": "123 Moda Cad, TR 34000" },
-      { "text": "+90 (555) 123-4567" },
-      { "text": "Pzt-Cmt: 09:00 - 20:00" }
+      {
+        "text": "123 Moda Cad, TR 34000"
+      },
+      {
+        "text": "+90 (555) 123-4567"
+      },
+      {
+        "text": "Pzt-Cmt: 09:00 - 20:00"
+      }
     ],
     "form": {
       "namePlaceholder": "Ad Soyad",
       "emailPlaceholder": "E-posta Adresi",
       "servicePlaceholder": "Konu / Hizmet",
       "messagePlaceholder": "Mesajınız",
-      "buttonText": "Talebi Gönder"
+      "buttonText": "Talebi Gönder",
+      "success": "Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.",
+      "mailto": "E-posta uygulamanız mesajınızla birlikte açıldı. Bize ulaşmak için göndere basın.",
+      "error": "Bir sorun oluştu ve mesajınız gönderilemedi. Lütfen tekrar deneyin ya da bize doğrudan e-posta gönderin."
     }
   },
   "footer": {
@@ -151,7 +188,10 @@
       "title": "Özel Bülten",
       "description": "Özel editoryal güncellemeler, erken rezervasyonlar ve güzellik sırları doğrudan e-posta kutunuzda.",
       "placeholder": "E-posta adresinizi girin",
-      "buttonText": "Abone Ol"
+      "buttonText": "Abone Ol",
+      "success": "Teşekkürler, listeye eklendiniz.",
+      "mailto": "E-posta uygulamanız açıldı. Abone olmak için göndere basın.",
+      "error": "Abonelik alınamadı. Lütfen tekrar deneyin."
     },
     "brand": {
       "description": "Salonumuzu ziyaret ettiğiniz için teşekkür ederiz. Yeni teklifleri, trend olan bakımları ve sağlıklı yaşam tavsiyelerini keşfetmek için bizimle bağlantıda kalın."
@@ -163,18 +203,38 @@
     },
     "links": {
       "company": [
-        { "label": "Ana Sayfa" },
-        { "label": "Hakkımızda" },
-        { "label": "Bakımlar" },
-        { "label": "Galeri" },
-        { "label": "İletişim" }
+        {
+          "label": "Ana Sayfa"
+        },
+        {
+          "label": "Hakkımızda"
+        },
+        {
+          "label": "Bakımlar"
+        },
+        {
+          "label": "Galeri"
+        },
+        {
+          "label": "İletişim"
+        }
       ],
       "support": [
-        { "label": "Gizlilik Politikası" },
-        { "label": "Şartlar ve Koşullar" },
-        { "label": "Site Haritası" },
-        { "label": "S.S.S." },
-        { "label": "Randevu Al" }
+        {
+          "label": "Gizlilik Politikası"
+        },
+        {
+          "label": "Şartlar ve Koşullar"
+        },
+        {
+          "label": "Site Haritası"
+        },
+        {
+          "label": "S.S.S."
+        },
+        {
+          "label": "Randevu Al"
+        }
       ]
     },
     "copyright": "© 2026 stylin beauty salon. Tüm hakları saklıdır."

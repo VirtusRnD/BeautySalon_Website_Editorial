@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { config } from "../config";
+import { submitForm } from "../lib/submitForm";
 import { FiArrowRight } from "react-icons/fi";
 import { FaGoogle, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -22,6 +23,18 @@ const getDynamicTitleSize = (text = "") => {
 const Footer = () => {
   const { footer } = config;
   const { t } = useTranslation();
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | mailto | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const values = Object.fromEntries(new FormData(e.currentTarget));
+    setStatus("sending");
+    try {
+      setStatus(await submitForm(values, { email: config.footer.brand.email, subject: t("footer.newsletter.title") }));
+    } catch {
+      setStatus("error");
+    }
+  }
 
   const companyLinksText =
     t("footer.links.company", { returnObjects: true }) || [];
@@ -90,11 +103,14 @@ const Footer = () => {
 
           {/* Right: Print-Style Form */}
           <div className="w-full lg:w-1/2 flex flex-col mt-4 lg:mt-0">
-            <form
-              onSubmit={(e) => e.preventDefault()}
+            {status === "sent" || status === "mailto" ? (
+<p className="font-sans font-medium text-sm md:text-base py-3">{t(status === "sent" ? "footer.newsletter.success" : "footer.newsletter.mailto")}</p>
+) : (
+<form
+              onSubmit={handleSubmit}
               className="flex flex-col sm:flex-row items-end w-full gap-4"
             >
-              <input
+              <input name="email"
                 type="email"
                 placeholder={toDynamicUpperCase(
                   t("footer.newsletter.placeholder"),
@@ -102,8 +118,12 @@ const Footer = () => {
                 className="w-full bg-transparent border-b-[3px] border-editorial-text/30 text-editorial-text placeholder-editorial-text/50 py-3 md:py-4 font-display font-bold text-xs md:text-sm tracking-widest outline-none focus:border-editorial-text transition-colors rounded-none"
                 required
               />
+              {status === "error" && (
+                <p role="alert" className="text-red-600 text-sm font-medium">{t("footer.newsletter.error")}</p>
+              )}
               <button
                 type="submit"
+                disabled={status === "sending"}
                 className="group flex-shrink-0 flex items-center justify-center gap-3 bg-editorial-text text-ocean-dark px-6 md:px-8 py-3 md:py-4 border-[3px] border-editorial-text font-display font-bold text-xs md:text-sm tracking-widest hover:bg-transparent hover:text-editorial-text transition-all duration-300 w-full sm:w-auto"
               >
                 {toDynamicUpperCase(t("footer.newsletter.buttonText"))}
@@ -113,6 +133,7 @@ const Footer = () => {
                 />
               </button>
             </form>
+)}
           </div>
         </motion.div>
 

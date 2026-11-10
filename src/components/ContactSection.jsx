@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { config } from "../config";
+import { submitForm } from "../lib/submitForm";
 import { FiMapPin, FiPhone, FiClock, FiArrowRight } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -21,6 +22,18 @@ const getDynamicTitleSize = (text = "") => {
 const ContactSection = () => {
   const { contact } = config;
   const { t } = useTranslation();
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | mailto | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const values = Object.fromEntries(new FormData(e.currentTarget));
+    setStatus("sending");
+    try {
+      setStatus(await submitForm(values, { email: config.footer.brand.email, subject: t("contact.title") }));
+    } catch {
+      setStatus("error");
+    }
+  }
 
   const infoTexts = t("contact.info", { returnObjects: true }) || [];
   const infoIcons = contact.infoIcons || [];
@@ -91,12 +104,15 @@ const ContactSection = () => {
           <div className="w-full bg-editorial-text text-ocean-dark p-6 md:p-12 rounded-none shadow-2xl relative">
             <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-10 h-10 md:w-12 md:h-12 bg-accent-purple rounded-none -z-10" />
 
-            <form
-              onSubmit={(e) => e.preventDefault()}
+            {status === "sent" || status === "mailto" ? (
+<p className="font-sans font-medium text-sm md:text-base py-4">{t(status === "sent" ? "contact.form.success" : "contact.form.mailto")}</p>
+) : (
+<form
+              onSubmit={handleSubmit}
               className="flex flex-col gap-6 md:gap-8"
             >
               <div className="flex flex-col sm:flex-row gap-6 md:gap-8 w-full">
-                <input
+                <input name="name"
                   type="text"
                   placeholder={toDynamicUpperCase(
                     t("contact.form.namePlaceholder"),
@@ -104,7 +120,7 @@ const ContactSection = () => {
                   className="w-full bg-transparent border-b-[3px] border-ocean-dark/20 text-ocean-dark placeholder-ocean-dark/50 py-2 md:py-3 font-display font-bold text-xs md:text-sm tracking-widest outline-none focus:border-ocean-dark transition-colors rounded-none"
                   required
                 />
-                <input
+                <input name="email"
                   type="email"
                   placeholder={toDynamicUpperCase(
                     t("contact.form.emailPlaceholder"),
@@ -114,7 +130,7 @@ const ContactSection = () => {
                 />
               </div>
 
-              <input
+              <input name="service"
                 type="text"
                 placeholder={toDynamicUpperCase(
                   t("contact.form.servicePlaceholder"),
@@ -122,7 +138,7 @@ const ContactSection = () => {
                 className="w-full bg-transparent border-b-[3px] border-ocean-dark/20 text-ocean-dark placeholder-ocean-dark/50 py-2 md:py-3 font-display font-bold text-xs md:text-sm tracking-widest outline-none focus:border-ocean-dark transition-colors rounded-none"
               />
 
-              <textarea
+              <textarea name="message"
                 placeholder={toDynamicUpperCase(
                   t("contact.form.messagePlaceholder"),
                 )}
@@ -131,8 +147,15 @@ const ContactSection = () => {
                 required
               ></textarea>
 
+              {status === "error" && (
+
+                <p role="alert" className="text-red-600 text-sm font-medium">{t("contact.form.error")}</p>
+
+              )}
+
               <button
                 type="submit"
+                disabled={status === "sending"}
                 className="group w-full flex items-center justify-center gap-3 md:gap-4 bg-ocean-dark text-editorial-text px-6 py-4 md:px-8 md:py-5 rounded-none font-display font-extrabold text-sm md:text-base tracking-widest hover:bg-accent-yellow hover:text-ocean-dark transition-all duration-300 mt-2 md:mt-4"
               >
                 {toDynamicUpperCase(t("contact.form.buttonText"))}
@@ -142,6 +165,7 @@ const ContactSection = () => {
                 />
               </button>
             </form>
+)}
           </div>
         </motion.div>
 

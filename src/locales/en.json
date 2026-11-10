@@ -2,12 +2,30 @@
   "navbar": {
     "logo": "Stylin Beauty",
     "links": [
-      { "id": "home", "label": "Home" },
-      { "id": "about", "label": "About" },
-      { "id": "gallery", "label": "Gallery" },
-      { "id": "treatments", "label": "Treatments" },
-      { "id": "reviews", "label": "Reviews" },
-      { "id": "contact", "label": "Contact" }
+      {
+        "id": "home",
+        "label": "Home"
+      },
+      {
+        "id": "about",
+        "label": "About"
+      },
+      {
+        "id": "gallery",
+        "label": "Gallery"
+      },
+      {
+        "id": "treatments",
+        "label": "Treatments"
+      },
+      {
+        "id": "reviews",
+        "label": "Reviews"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
     ],
     "signInText": "Sign in",
     "signUpText": "Sign Up"
@@ -34,7 +52,8 @@
     ],
     "datePlaceholder": "Select Date",
     "timePlaceholder": "Select Time",
-    "buttonText": "Confirm Booking"
+    "buttonText": "Confirm Booking",
+    "error": "Your booking could not be sent. Please try again or call us."
   },
   "aboutUs": {
     "overline": "Our Story",
@@ -50,9 +69,18 @@
         "True beauty stems from confidence and self-care. We use only premium, ethically sourced products tailored to your unique canvas, ensuring a transformative experience."
       ],
       "stats": [
-        { "value": "16+", "label": "Years of Mastery" },
-        { "value": "10k", "label": "Curated Looks" },
-        { "value": "15", "label": "Industry Awards" }
+        {
+          "value": "16+",
+          "label": "Years of Mastery"
+        },
+        {
+          "value": "10k",
+          "label": "Curated Looks"
+        },
+        {
+          "value": "15",
+          "label": "Industry Awards"
+        }
       ],
       "closeText": "Close Manifesto"
     }
@@ -134,16 +162,25 @@
     "title": "Inquiries",
     "description": "For salon bookings, editorial shoots, or press inquiries, please fill out the form below.",
     "info": [
-      { "text": "123 Fashion Ave, NY 10001" },
-      { "text": "+1 (555) 123-4567" },
-      { "text": "Mon-Sat: 9AM - 8PM" }
+      {
+        "text": "123 Fashion Ave, NY 10001"
+      },
+      {
+        "text": "+1 (555) 123-4567"
+      },
+      {
+        "text": "Mon-Sat: 9AM - 8PM"
+      }
     ],
     "form": {
       "namePlaceholder": "Full Name",
       "emailPlaceholder": "Email Address",
       "servicePlaceholder": "Subject / Service",
       "messagePlaceholder": "Your Message",
-      "buttonText": "Submit Inquiry"
+      "buttonText": "Submit Inquiry",
+      "success": "Your message has been sent! We will get back to you as soon as possible.",
+      "mailto": "Your mail app has opened with your message. Press send to reach us.",
+      "error": "Something went wrong and your message was not sent. Please try again or email us directly."
     }
   },
   "footer": {
@@ -151,7 +188,10 @@
       "title": "The Insider List",
       "description": "Exclusive editorial updates, early bookings, and beauty insights delivered directly to your inbox.",
       "placeholder": "Enter your email address",
-      "buttonText": "Subscribe"
+      "buttonText": "Subscribe",
+      "success": "Thanks, you are on the list.",
+      "mailto": "Your mail app has opened. Press send to subscribe.",
+      "error": "Could not subscribe. Please try again."
     },
     "brand": {
       "description": "We appreciate your visit to our salon. Keep connected with us to explore new offers, trending treatments, and wellness advice."
@@ -163,18 +203,38 @@
     },
     "links": {
       "company": [
-        { "label": "Home" },
-        { "label": "About Us" },
-        { "label": "Treatments" },
-        { "label": "Gallery" },
-        { "label": "Contact Us" }
+        {
+          "label": "Home"
+        },
+        {
+          "label": "About Us"
+        },
+        {
+          "label": "Treatments"
+        },
+        {
+          "label": "Gallery"
+        },
+        {
+          "label": "Contact Us"
+        }
       ],
       "support": [
-        { "label": "Privacy policy" },
-        { "label": "Terms & Condition" },
-        { "label": "Sitemap" },
-        { "label": "FAQs" },
-        { "label": "Get Appointment" }
+        {
+          "label": "Privacy policy"
+        },
+        {
+          "label": "Terms & Condition"
+        },
+        {
+          "label": "Sitemap"
+        },
+        {
+          "label": "FAQs"
+        },
+        {
+          "label": "Get Appointment"
+        }
       ]
     },
     "copyright": "© 2026 stylin beauty salon. All rights reserved."
